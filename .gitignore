@@ -1,52 +1,58 @@
-# Prerequisites
-*.d
+# Ignore everything by default
+*
+*/**
 
-# Object files
-*.o
-*.ko
-*.obj
-*.elf
+# Allow specific file types
+!*.ps1
+!*.psm1
+!*.psd1
+!*.xml
+!*.json
+!*.md
+!*.psproj
+!*.yaml
+!*.yml
+!.gitignore
+!LICENSE
+!README*
 
-# Linker output
-*.ilk
-*.map
-*.exp
+# Allow directories to be tracked
+!*/
 
-# Precompiled Headers
-*.gch
-*.pch
+# Ignore specific folders
+[Bb]in/
+[Oo]bj/
+[Tt]emp/
+[Ll]ogs/
+[Tt]est[Rr]esults/
 
-# Libraries
-*.lib
-*.a
-*.la
-*.lo
+# Ignore common PowerShell files that should not be committed
+*.pssproj.user
+*.ps1.tests
+*.coverage
 
-# Shared objects (inc. Windows DLLs)
-*.dll
-*.so
-*.so.*
-*.dylib
+# Ignore VS Code settings
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
 
-# Executables
-*.exe
-*.out
-*.app
-*.i*86
-*.x86_64
-*.hex
+# Ignore PowerShell module caches
+*.psm1.cache
 
-# Debug files
-*.dSYM/
-*.su
-*.idb
-*.pdb
+# Ignore Windows system files
+[Tt]humbs.db
+[Dd]esktop.ini
 
-# Kernel Module Compile Results
-*.mod*
-*.cmd
-.tmp_versions/
-modules.order
-Module.symvers
-Mkfile.old
-dkms.conf
+# Ignore certificates and credentials
+*.pfx
+*.p12
+*.key
+*.crt
+*.cer
+*.pem
+*.env
+*[Pp]assword*
+*[Ss]ecret*
+*[Kk]ey*
+*[Cc]redential*
