@@ -90,7 +90,6 @@ $driverIsInstalled = $false
 foreach ($driver in $installedDrivers) {
     foreach ($driverReference in $driverReferenceList) {
         if ($driver -like "*$driverReference*") {
-            $installedDriverCount++
             $driverName = $driver.split(":")[1].Trim()
             Write-Host "Found installed driver: $driverName"
             $installedDriverCount++
