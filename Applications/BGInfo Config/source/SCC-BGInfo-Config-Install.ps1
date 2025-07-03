@@ -446,7 +446,7 @@ function Create-Shortcut {
 }
 
 ################################ SCRIPT VARIABLES #######################################
-$script:package = "SCC_BGInfo_Config_Install_QLD"                                         #Name of the package should be descriptive, but short, no special characters and no spaces
+$script:package = "SCC_BGInfo_Config_Install_BH"                                         #Name of the package should be descriptive, but short, no special characters and no spaces
 $version = "1.00"                                                           #Should be the version of the application - not the installer version which could be different
 $pathLocal = "C:\Windows\Temp"                                                     #Must be C:\'something'
 $global:pathLog = "$pathLocal\Intune\$package\$version\Logs"                #Default location for log files
@@ -496,8 +496,8 @@ if (![System.IO.Directory]::Exists($pathTag)) {
 ################################ AAPLICATION INSTALLER LOGIC VARIABLES #######################################
 
 $rootInstallPath = [System.Environment]::GetFolderPath("CommonApplicationData") + "\BGinfo" # This is the default installation path for BGInfo Configuration
-$configInstallPath = "$rootInstallPath\BGInfoConfig_2025_QLD.bgi" # This is the default executable path for BGInfo
-$configSourcePath = "$PSScriptRoot\BGInfoConfig_2025_QLD.bgi" # This is the source path for BGInfo
+$configInstallPath = "$rootInstallPath\BGInfoConfig_2025_BH.bgi" # This is the default executable path for BGInfo
+$configSourcePath = "$PSScriptRoot\BGInfoConfig_2025_BH.bgi" # This is the source path for BGInfo
 
 $rootBGInfoInstallPath = [System.Environment]::GetFolderPath("ProgramFiles") + "\BGinfo\Bginfo64.exe" # This is the default installation path for BGInfo
 #$shortcutArguments = "C:\ProgramData\BGinfo\BGInfoConfig_2025.bgi /silent /timer:0 /nolicprompt" # This is the arguments that will be passed to BGInfo when it is executed
